@@ -7,8 +7,11 @@ Para rodar este exemplo, é necessário Node.js.
 Para rodar o pacote:
 
 `git clone git@github.com:will-amaral/criptografia.git`
+
 `cd criptografia`
+
 `yarn` ou `npm install`
+
 `yarn start` ou `npm start`
 
 Siga as perguntas do prompt para criprografar ou decifrar uma mensagem. 
