@@ -36,11 +36,11 @@ function cifraVigenere(mensagem, chave, sinal) {
 async function breakCesar(mensagem, frequenciaBase, frequenciaMensagem) {
     let indice = alfabeto.indexOf(frequenciaBase[0][0]) - alfabeto.indexOf(frequenciaMensagem[0][0]) % 26; 
     for (let passo = 0; passo <= 26; passo++) {
-        if (indice != alfabeto.indexOf(frequenciaBase[passo][0]) - alfabeto.indexOf(frequenciaBase[passo][0]) % 26)  indice++
         console.log('Tentativa de Decifrar: ' + cifraCesar(mensagem, indice, 1) + '\n');
         const { again } = await inquirer.prompt(prompts[7]);
+        indice++;
         if (again) return console.log('Mensagem decifrada com sucesso!');
-        else if (passo == frequenciaBase.length) return console.log('Número máximo de passos executados');
+        else if (passo == 26) return console.log('Número máximo de passos executados');
     }
 }
 // A função breakVigenere utiliza a análise de frequência para tentar quebrar a mensagem criptografada.
