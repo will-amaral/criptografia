@@ -34,11 +34,10 @@ function cifraVigenere(mensagem, chave, sinal) {
 // Caso o usuário não saiba o número de passos para quebrar a cifra de cesar, fazemos
 // todos os passos possíveis
 async function breakCesar(mensagem, frequenciaBase, frequenciaMensagem) {
-    let indice = alfabeto.indexOf(frequenciaBase[0][0]) - alfabeto.indexOf(frequenciaMensagem[0][0]) % 26; 
     for (let passo = 0; passo <= 26; passo++) {
+        let indice = alfabeto.indexOf(frequenciaBase[0][0]) + alfabeto.indexOf(frequenciaMensagem[0][passo]) % 26; 
         console.log('Tentativa de Decifrar: ' + cifraCesar(mensagem, indice, 1) + '\n');
         const { again } = await inquirer.prompt(prompts[7]);
-        indice++;
         if (again) return console.log('Mensagem decifrada com sucesso!');
         else if (passo == 26) return console.log('Número máximo de passos executados');
     }
