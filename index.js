@@ -15,7 +15,7 @@ function cifraCesar(mensagem, passo, sinal) {
 }
 // Filtrar a chave para valores númericos que serão utilizados na cifra de Viginere
 function filtrarChave(chave) {
-    return [...chave].map((char, indice) => {
+    return [...chave].map((_, indice) => {
         return indice + 1;
     });
 }
