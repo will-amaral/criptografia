@@ -50,7 +50,7 @@ const prompts = [
     {
         type: 'input',
         name: 'fraseBase',
-        message: 'Entre uma frase para realizar a análise de frequência'
+        message: 'Entre uma frase para realizar a análise de frequência: '
     },
     {
         type: 'confirm',

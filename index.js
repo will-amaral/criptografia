@@ -70,6 +70,7 @@ async function Main() {
             const frequenciaBase = await analiseFrequencia(fraseBase);
             const frequenciaMensagem = await analiseFrequencia(mensagem);
             console.log(frequenciaMensagem);
+            console.log(frequenciaBase);
             breakCesar(mensagem, frequenciaBase, frequenciaMensagem);
         }
     } else {
