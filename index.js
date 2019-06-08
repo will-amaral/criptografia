@@ -58,9 +58,9 @@ async function Main() {
     if (cifra == 'Cifra de César') {
         if (ops == 'Cifrar a mensagem') {
             console.log('A mensagem original é: ' + mensagem);
-            console.log('A mensagem cifrada é: ' + cifraCesar(mensagem, chave, 1));
+            console.log('A mensagem cifrada é: ' + cifraCesar(mensagem, chave, 1).toUpperCase());
         } else if (temCifra) {
-            console.log('A mensagem cifrada é: ' + mensagem);
+            console.log('A mensagem cifrada é: ' + mensagem.toUpperCase());
             console.log('A mensagem original é: ' + cifraCesar(mensagem, chaveDecifra, -1));
         } else {
             const { fraseBase } = await inquirer.prompt(prompts[6]);
@@ -73,9 +73,9 @@ async function Main() {
     } else {
         if (ops == 'Cifrar a mensagem') {
             console.log('A mensagem original é: ' + mensagem);
-            console.log('A mensagem cifrada é: ' + cifraVigenere(mensagem, chave, 1));
+            console.log('A mensagem cifrada é: ' + cifraVigenere(mensagem, chave, 1).toUpperCase());
         } else if (temCifra) {
-            console.log('A mensagem cifrada é: ' + mensagem);
+            console.log('A mensagem cifrada é: ' + mensagem.toUpperCase());
             console.log('A mensagem original é: ' + cifraVigenere(mensagem, chaveDecifra, -1));
         } else {
             console.log('Não é possível decifrar essa mensagem.');
