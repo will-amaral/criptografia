@@ -1,12 +1,10 @@
 // A variável inquirer é um componente nodejs para auxiliar na
 // criação de prompts interativos. 
 // Aqui declaramos também a variável alfabeto que servirá de base para as funções
-// e a variável index, que será usada para quebrar uma cifra de forma automática. 
-// Importamos também os módulos separados para organização.
+// Importamos também os prompts separados para organização.
 const inquirer = require('inquirer');
 const alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 const prompts = require('./prompts');
-let index = 1;
 // O método cifraCesar utiliza a cifra de Ceśar para cifrar ou decifrar
 // uma mensagem. Aqui, separamos os espaços, pontos e vírgulas
 function cifraCesar(mensagem, passo, sinal) {
